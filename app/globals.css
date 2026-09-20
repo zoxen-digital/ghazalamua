@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-cream: #fffcfa;
+  --color-cream-2: #fff8f5;
+  --color-cream-3: #fdf3ef;
+  --color-blush: #d77f7f;
+  --color-blush-2: #d98989;
+  --color-blush-3: #e7aaa2;
+  --color-pink-soft: #f5d9d3;
+  --color-pink-soft-2: #fbe9e4;
+  --color-rose: #c96969;
+  --color-text: #2f1e1b;
+  --color-text-2: #49312e;
+  --color-muted: #786966;
+  --color-gold: #c8a15a;
+  --color-border: #ecddd8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: var(--color-cream);
+  --color-cream-2: var(--color-cream-2);
+  --color-cream-3: var(--color-cream-3);
+  --color-blush: var(--color-blush);
+  --color-blush-2: var(--color-blush-2);
+  --color-blush-3: var(--color-blush-3);
+  --color-pink-soft: var(--color-pink-soft);
+  --color-pink-soft-2: var(--color-pink-soft-2);
+  --color-rose: var(--color-rose);
+  --color-text: var(--color-text);
+  --color-text-2: var(--color-text-2);
+  --color-muted: var(--color-muted);
+  --color-gold: var(--color-gold);
+  --color-border: var(--color-border);
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+  --font-script: var(--font-script);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-text);
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-serif-display {
+  font-family: var(--font-playfair), serif;
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+.container-x {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rose);
+  outline-offset: 2px;
 }

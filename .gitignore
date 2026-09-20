@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# temporary source images for scripts/upload-gallery-folder.ts (safe to delete after running)
+/gallery
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

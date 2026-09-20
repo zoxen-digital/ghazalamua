@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#FDF3EF"/>
+  <circle cx="400" cy="260" r="120" fill="#F5D9D3"/>
+  <path d="M250 460 Q400 380 550 460 L550 600 L250 600 Z" fill="#E7AAA2"/>
+  <text x="400" y="540" font-family="Georgia, serif" font-size="24" fill="#786966" text-anchor="middle">Ghazala Qureshi</text>
+</svg>
