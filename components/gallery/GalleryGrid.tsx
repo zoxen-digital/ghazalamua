@@ -1,11 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
-import { PlayCircle, Heart, ImageIcon } from "lucide-react";
+import { Heart } from "lucide-react";
 import FilterPills from "@/components/gallery/FilterPills";
 import Lightbox from "@/components/gallery/Lightbox";
-import { resolveImageUrl } from "@/lib/uploads";
+import GalleryThumb from "@/components/gallery/GalleryThumb";
 import type { GalleryItemDTO } from "@/types";
 
 export default function GalleryGrid({
@@ -38,33 +37,7 @@ export default function GalleryGrid({
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {displayed.map((item) => (
-          <button
-            key={item.id}
-            type="button"
-            onClick={() => setSelected(item)}
-            className="group relative aspect-square overflow-hidden rounded-xl border border-[color:var(--color-border)] text-left"
-          >
-            <Image
-              src={resolveImageUrl(item.thumbnailUrl || item.imageUrl)}
-              alt={item.title}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-110"
-              sizes="(max-width: 768px) 50vw, 25vw"
-            />
-            {item.type === "video" && (
-              <>
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <PlayCircle size={40} className="text-white drop-shadow" />
-                </div>
-                <span className="absolute bottom-2 left-2 rounded bg-black/60 px-1.5 py-0.5 text-[10px] text-white">
-                  0:06
-                </span>
-                <span className="absolute bottom-2 right-2 text-white">
-                  <ImageIcon size={14} />
-                </span>
-              </>
-            )}
-          </button>
+          <GalleryThumb key={item.id} item={item} onSelect={() => setSelected(item)} />
         ))}
 
         {limit && (

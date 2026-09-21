@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/ui/LoadingImage";
 import { Calendar, Image as ImageIcon, Heart, Home as HomeIcon, MapPin, Sparkles } from "lucide-react";
 import Button from "@/components/ui/Button";
 import type { HomepageContentDTO } from "@/types";
@@ -16,7 +16,7 @@ export default function Hero({ content }: { content: HomepageContentDTO }) {
 
   return (
     <section className="relative overflow-hidden min-h-[600px] md:min-h-[660px] flex items-center">
-      <Image
+      <LoadingImage
         src="/mobile-hero.png"
         alt="Bridal makeup portrait by Ghazala Qureshi"
         fill
@@ -25,7 +25,7 @@ export default function Hero({ content }: { content: HomepageContentDTO }) {
         className="object-cover md:hidden"
         sizes="100vw"
       />
-      <Image
+      <LoadingImage
         src="/hero.png"
         alt="Bridal makeup portrait by Ghazala Qureshi"
         fill

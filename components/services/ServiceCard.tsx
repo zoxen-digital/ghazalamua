@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/ui/LoadingImage";
 import { resolveImageUrl } from "@/lib/uploads";
 import type { ServiceDTO } from "@/types";
 
@@ -6,7 +6,7 @@ export default function ServiceCard({ service, image }: { service: ServiceDTO; i
   return (
     <div className="group bg-white rounded-xl border border-[color:var(--color-border)] overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative aspect-[4/3] overflow-hidden">
-        <Image
+        <LoadingImage
           src={image ?? resolveImageUrl(service.imageUrl)}
           alt={service.title}
           fill

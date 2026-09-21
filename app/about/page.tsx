@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Heart, Users, Home as HomeIcon, Gem, MapPin, Calendar } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ScriptText from "@/components/ui/ScriptText";
 import Button from "@/components/ui/Button";
+import LoadingImage from "@/components/ui/LoadingImage";
 import GalleryGrid from "@/components/gallery/GalleryGrid";
 import { getHomepageContent, getGalleryItems } from "@/lib/data";
 
@@ -30,7 +30,7 @@ export default async function AboutPage() {
       <section className="bg-[color:var(--color-cream-3)]">
         <div className="container-x py-16 md:py-20 grid md:grid-cols-[minmax(0,22rem)_1fr] gap-10 md:gap-14 items-center">
           <div className="relative aspect-[4/5] w-full max-w-sm mx-auto md:mx-0 rounded-3xl overflow-hidden shadow-lg">
-            <Image
+            <LoadingImage
               src="/aboutpage.png"
               alt="Portrait of Ghazala Qureshi"
               fill
@@ -99,7 +99,7 @@ export default async function AboutPage() {
       </section>
 
       <section className="relative overflow-hidden">
-        <Image src="/home1.png" alt="" fill className="object-cover" sizes="100vw" />
+        <LoadingImage src="/home1.png" alt="" fill className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-black/25" />
         <div className="container-x relative py-14 text-center">
           <h2 className="font-serif-display text-3xl mb-4 text-white">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/ui/LoadingImage";
 import { Star } from "lucide-react";
 import { resolveImageUrl } from "@/lib/uploads";
 import type { ReviewDTO } from "@/types";
@@ -19,7 +19,14 @@ export default function ReviewCard({ review }: { review: ReviewDTO }) {
       <div className="flex items-center gap-3 mt-auto">
         <div className="relative h-10 w-10 rounded-full overflow-hidden bg-[color:var(--color-pink-soft)]">
           {review.avatarUrl && (
-            <Image src={resolveImageUrl(review.avatarUrl)} alt={review.customerName} fill className="object-cover" sizes="40px" />
+            <LoadingImage
+              src={resolveImageUrl(review.avatarUrl)}
+              alt={review.customerName}
+              fill
+              className="object-cover"
+              sizes="40px"
+              spinnerSize={14}
+            />
           )}
         </div>
         <span className="text-sm font-semibold text-[color:var(--color-text)]">— {review.customerName}</span>

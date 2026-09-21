@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/ui/LoadingImage";
 import { Calendar, Mail } from "lucide-react";
 import Button from "@/components/ui/Button";
 import type { HomepageContentDTO } from "@/types";
@@ -6,7 +6,7 @@ import type { HomepageContentDTO } from "@/types";
 export default function BookingCTA({ content }: { content: HomepageContentDTO }) {
   return (
     <section className="relative overflow-hidden">
-      <Image
+      <LoadingImage
         src="/home1.png"
         alt="Be you but more beautiful"
         fill

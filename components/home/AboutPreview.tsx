@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LoadingImage from "@/components/ui/LoadingImage";
 import { Heart, Users, Home as HomeIcon, Gem, MapPin } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ScriptText from "@/components/ui/ScriptText";
@@ -18,7 +18,7 @@ export default function AboutPreview({ content }: { content: HomepageContentDTO 
       <div className="container-x py-16 md:py-20 grid md:grid-cols-[auto_1fr_auto] gap-10 items-center">
         <div className="flex justify-center md:justify-start">
           <div className="relative h-[220px] w-[220px] md:h-[300px] md:w-[300px] rounded-full overflow-hidden border-4 border-[color:var(--color-pink-soft)] shadow-md">
-            <Image
+            <LoadingImage
               src="/about.png"
               alt="Portrait of Ghazala Qureshi"
               fill

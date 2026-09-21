@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, Parisienne } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import SplashScreen from "@/components/SplashScreen";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <SplashScreen />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
