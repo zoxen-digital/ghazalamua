@@ -17,7 +17,7 @@ export default function Hero({ content }: { content: HomepageContentDTO }) {
   return (
     <section className="relative overflow-hidden min-h-[600px] md:min-h-[660px] flex items-center">
       <LoadingImage
-        src="/mobile-hero.png"
+        src="/newheromobile.png"
         alt="Bridal makeup portrait by Ghazala Qureshi"
         fill
         priority
@@ -26,7 +26,7 @@ export default function Hero({ content }: { content: HomepageContentDTO }) {
         sizes="100vw"
       />
       <LoadingImage
-        src="/hero.png"
+        src="/newhero1.png"
         alt="Bridal makeup portrait by Ghazala Qureshi"
         fill
         priority
